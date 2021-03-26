@@ -7,11 +7,11 @@ OBJECTS_HTTP = main_http.o
 OBJECTS_HTTPS = main_https.o
 LDFLAGS_COMMON = -std=c++17 -O3 -pthread -lboost_system
 LDFLAGS_HTTP = 
-LDFLAGS_HTTPS = -lssl -lcrypto 
+LDFLAGS_HTTPS = -L/usr/local/opt/openssl@1.1/lib  -lssl -lcrypto 
 
 LPATH_COMMON = -I/usr/include/boost
 LPATH_HTTP = 
-LPATH_HTTPS = -I/usr/include/openssl
+LPATH_HTTPS = -I/usr/local/opt/openssl@1.1/include
 
 LLIB_COMMON = -L/usr/lib
 LLIB_HTTP = 
